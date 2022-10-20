@@ -1,6 +1,6 @@
 {
   "name": "@behodler/dev-env",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Ganache local chain for Behodler dev",
   "scripts": {
     "docker:ganache-start": "rm -rf .tmp && mkdir .tmp && cp -r database .tmp/database && docker-compose up --remove-orphans -d ganache",
