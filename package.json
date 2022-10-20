@@ -2,7 +2,6 @@
   "name": "@behodler/dev-env",
   "version": "0.0.1",
   "description": "Ganache local chain for Behodler dev",
-  "main": "index.js",
   "scripts": {
     "docker:ganache-start": "rm -rf .tmp && mkdir .tmp && cp -r database .tmp/database && docker-compose up --remove-orphans -d ganache",
     "docker:ganache-stop": "docker-compose down"
@@ -14,5 +13,23 @@
   "bugs": {
     "url": "https://github.com/Behodler/dev-env/issues"
   },
-  "homepage": "https://github.com/Behodler/dev-env#readme"
+  "homepage": "https://github.com/Behodler/dev-env#readme",
+  "bin": {
+    "behodler-dev-env-start": "bin/docker-ganache-start.js",
+    "behodler-dev-env-stop": "bin/docker-ganache-stop.js"
+  },
+  "engines": {
+    "node": ">=14.17.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "files": [
+    "database",
+    "database/**/*"
+  ],
+  "devDependencies": {
+    "cross-spawn": "^7.0.3",
+    "shelljs": "^0.8.5"
+  }
 }
