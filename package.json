@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "docker:start-ganache": "rm -rf ./.tmp && mkdir ./.tmp && cp -r ./database ./.tmp/database && docker-compose up --remove-orphans -d ganache",
-    "docker:stop-ganache": "docker-compose down"
+    "docker:ganache-start": "rm -rf .tmp && mkdir .tmp && cp -r database .tmp/database && docker-compose up --remove-orphans -d ganache",
+    "docker:ganache-stop": "docker-compose down"
   },
   "repository": {
     "type": "git",
