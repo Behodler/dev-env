@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+    ganache:
+        image: trufflesuite/ganache-cli
+        ports:
+            - 8545:8545
+        tty: true
+        command: "-g 1 -b 20 -l 15481674 --db ./tmp/database -m 'eight fun oak spot hip pencil matter domain bright fiscal nurse easy'"
+        volumes:
+            - ./.tmp/database:/app/database
