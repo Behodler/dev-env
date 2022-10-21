@@ -39,7 +39,7 @@ if (!fs.existsSync(tmpDirPath)) {
 }
 
 shell.echo('Starting Behodler ganache dev env...');
-shell.exec(`docker-compose -f ${dockerComposeYmlPath} up --remove-orphans -d ganache`);
+shell.exec(`docker compose -f ${dockerComposeYmlPath} up --remove-orphans -d ganache`);
 
 const child = spawn.sync('node', __filename, { stdio: 'inherit' });
 process.exit(child.signal || child.status);
