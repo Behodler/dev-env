@@ -1,6 +1,6 @@
 {
   "name": "@behodler/dev-env",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Ganache local chain for Behodler dev",
   "scripts": {
     "docker:ganache-start": "node ./bin/docker-ganache-start.js",
@@ -29,7 +29,7 @@
     "database/**/*",
     "docker-compose.yml"
   ],
-  "devDependencies": {
+  "dependencies": {
     "cross-spawn": "^7.0.3",
     "dir-compare": "^4.0.0",
     "shelljs": "^0.8.5"
