@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "description": "Ganache local chain for Behodler dev",
   "scripts": {
-    "docker:ganache-start": "rm -rf .tmp && mkdir .tmp && cp -r database .tmp/database && docker-compose up --remove-orphans -d ganache",
-    "docker:ganache-stop": "docker-compose down"
+    "docker:ganache-start": "node ./bin/docker-ganache-start.js",
+    "docker:ganache-stop": "node ./bin/docker-ganache-stop.js"
   },
   "repository": {
     "type": "git",
