@@ -6,6 +6,6 @@ services:
         ports:
             - 8545:8545
         tty: true
-        command: "-g 1 -b 20 -l 15481674 --db database -m 'eight fun oak spot hip pencil matter domain bright fiscal nurse easy'"
+        command: "-g 1 -b 4 -l 15481674 --db database -m 'eight fun oak spot hip pencil matter domain bright fiscal nurse easy'"
         volumes:
             - ./.tmp/database:/app/database

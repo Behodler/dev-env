@@ -1,6 +1,6 @@
 {
   "name": "@behodler/dev-env",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Ganache local chain for Behodler dev",
   "scripts": {
     "docker:ganache-start": "node ./bin/docker-ganache-start.js",
