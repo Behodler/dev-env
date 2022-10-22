@@ -2,7 +2,6 @@
 
 const path = require('path');
 const fs = require('fs');
-const spawn = require('cross-spawn');
 const shell = require('shelljs');
 const dirCompare = require('dir-compare');
 
@@ -40,6 +39,3 @@ if (!fs.existsSync(tmpDirPath)) {
 
 shell.echo('Starting Behodler ganache dev env...');
 shell.exec(`docker compose -f ${dockerComposeYmlPath} up --remove-orphans -d ganache`);
-
-const child = spawn.sync('node', __filename, { stdio: 'inherit' });
-process.exit(child.signal || child.status);
