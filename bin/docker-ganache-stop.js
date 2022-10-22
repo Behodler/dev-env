@@ -6,3 +6,7 @@ const dockerComposeYmlPath = path.resolve(path.join(__dirname, '../docker-compos
 
 shell.echo('Stopping Behodler ganache dev env...');
 shell.exec(`docker compose -f ${dockerComposeYmlPath} down`);
+
+shell.echo("Restoring file permissions for executing user")
+const tmpDirPath = path.resolve(path.join(__dirname, '../.tmp/'));
+shell.chmod("-R","704",tmpDirPath)
