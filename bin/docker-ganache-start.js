@@ -13,7 +13,6 @@ const dockerComposeYmlPath = path.resolve(path.join(__dirname, '../docker-compos
 if (!fs.existsSync(tmpDirPath)) {
   shell.echo('Creating .tmp directory...');
   shell.mkdir('-p', tmpDirPath);
-  shell.chmod('-R','777',tmpDirPath)
   shell.echo('Copying saved Behodler state to ganache temp db dir...');
   shell.cp('-R', savedDbPath, tmpDbPath);
   shell.echo('Behodler state ready.');
